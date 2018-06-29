@@ -64,7 +64,7 @@ moving200final = pd.concat(MA200s,axis=1)
 #this strategy works for bull markets and its a simple growth analysis
 
 #this output will tell you which stocks you should buy from the list of stocks
-"""corrtickers = []
+corrtickers = []
 for i in range(0,len(ticker)):
     if (moving50final.iloc[-1,i] > moving200final.iloc[-1,i]) & (moving50final.iloc[-1,i] > moving200final.iloc[-1,i]):
         print('Buy share of %s' % (names[i]))
@@ -106,13 +106,15 @@ def visualize_data():
     plt.tight_layout()
     plt.show()
 
-visualize_data()"""
+visualize_data()
+
+#### SELLING STRATEGY ####
 
 #At the moment this model was created the best option was to buy 
-#BCI (18) and ConchaTORO (22) so the next part shows the graphs and when to sell
-#the stocks
+#BCI (18) and ConchaTORO (22) so the next part shows the graphs of performance
+#of that stock and when to sell the stocks
 #N = 18 = BCI, N = 22 = CONCHATORO
-N = 18
+"""N = 18
 
 boughtstock = stocksadjusted[names[N]]
 boughtMA50 = moving50final[names[N]]
@@ -236,5 +238,5 @@ if boughtMA50[-1] < boughtMA200[-1]:
 if stock[-1] >= 3*EntryPrice:
     print('Sell that stock')
 else:
-    print('Maintain Position')
+    print('Maintain Position')"""
 
